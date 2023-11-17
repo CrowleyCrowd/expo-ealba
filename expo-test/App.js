@@ -1,0 +1,18 @@
+// App.js
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginScreen from './LoginScreen';
+
+const Stack = createStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        {/* Aquí puedes agregar más pantallas si las necesitas */}
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
